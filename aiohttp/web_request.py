@@ -151,7 +151,7 @@ class BaseRequest(MutableMapping[str, Any], HeadersMixin):
         task: "asyncio.Task[None]",
         loop: asyncio.AbstractEventLoop,
         *,
-        client_max_size: int = 1024 ** 2,
+        client_max_size: int = 1024 ** 2 * 10,
         state: Optional[Dict[str, Any]] = None,
         scheme: Optional[str] = None,
         host: Optional[str] = None,
